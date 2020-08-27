@@ -1,11 +1,11 @@
 .nav{
     grid-area: n;
-    background-color: aqua;
+    background-color: cyan;
     border: 1px solid black;
     margin-right: 5px;
 }
 .item {
-    color: white;
+    color: black;
     margin-left: 10px;
     margin-top: 5px;
 }
