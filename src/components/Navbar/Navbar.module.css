@@ -4,8 +4,11 @@
     border: 1px solid black;
     margin-right: 5px;
 }
-.item {
+.item a{
     color: black;
     margin-left: 10px;
     margin-top: 5px;
+}
+.item a.activeLink{
+    color:gold;
 }
