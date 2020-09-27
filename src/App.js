@@ -8,6 +8,8 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Setting from "./components/Setting/Setting";
 import {BrowserRouter, Route} from "react-router-dom";
+import {dialogs} from "./index";
+import {messages} from "./index";
 
 const App = () => {
     return (
@@ -16,8 +18,8 @@ const App = () => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' component={Dialogs}/>
-                    <Route path='/profile' component={Profile}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogs = {dialogs} messages = {messages}/>}/>
+                    <Route path='/profile' render={() => <Profile/>}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/setting' component={Setting}/>

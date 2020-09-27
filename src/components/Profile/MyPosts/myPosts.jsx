@@ -1,14 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from './myPosts.module.css';
 import Post from "./Post/Post";
 
-const MyPosts = () => {
-    let posts = [
-        {id: 1, message: 'Hi, how are you?', like: 252},
-        {id: 2, message: "It's my first post", like: 389},
-        {id: 3, message: "hello world!!!", like: 1240}
-    ]
-    let postsElements = posts.map(p => <Post massage={p.message} like={p.like}/>)
+const MyPosts = ({ posts }) => {
+
+    const postsElements = posts.map(post => <Post massage={post.message} like={post.like}/>)
 
     return (
         <div className={classes.postsBlock}>
