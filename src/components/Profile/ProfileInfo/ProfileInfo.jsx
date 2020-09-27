@@ -5,7 +5,7 @@ const ProfileInfo = () => {
     return(
     <>
         <div>
-            <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt=""/>
+            <img src="https://gaimernet.3dn.ru/_ld/3/86368313.jpg" alt=""/>
         </div>
         <div className={classes.descriptionBlock}>
             ava + description
