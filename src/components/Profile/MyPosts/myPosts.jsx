@@ -3,7 +3,6 @@ import classes from './myPosts.module.css';
 import Post from "./Post/Post";
 
 const MyPosts = ({ posts }) => {
-
     const postsElements = posts.map(post => <Post massage={post.message} like={post.like}/>)
 
     return (
