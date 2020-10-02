@@ -1,10 +1,12 @@
 // Данные
+import {renderEntireTree} from "../render";
+
 export let state = {
     profilePage: {
         posts: [
-            {id: 1, message: 'Hi, how are you?', like: 252},
+            {id: 3, message: 'Hi, how are you?', like: 252},
             {id: 2, message: "It's my first post", like: 389},
-            {id: 3, message: "hello world!!!", like: 1240}
+            {id: 1, message: "hello world!!!", like: 1240}
         ],
     },
     dialogsPage: {
@@ -25,4 +27,13 @@ export let state = {
     },
 
 }
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        like: 0,
+    };
+    state.profilePage.posts.unshift(newPost);
+    renderEntireTree(state, addPost);
+};
 

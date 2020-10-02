@@ -10,22 +10,19 @@ import Setting from "./components/Setting/Setting";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-const App = ({ state: state }) => {
+const App = ({ state: state, addPost }) => {
     return (
-        <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={() => <Dialogs state = {state.dialogsPage} />}/>
-                    <Route path='/profile' render={() => <Profile state = {state.profilePage}/>}/>
+                    <Route path='/profile' render={() => <Profile state = {state.profilePage} addPost = {addPost}/>}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/setting' component={Setting}/>
                 </div>
             </div>
-        </BrowserRouter>
-
     );
 }
 
